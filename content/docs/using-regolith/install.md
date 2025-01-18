@@ -23,7 +23,7 @@ to configure your system to read packages from the Regolith package repository a
 1. Register the Regolith public key to your local `apt`:
 
    ```console
-   wget -qO - http://archive.regolith-desktop.com/regolith.key | \
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
    gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
    ```
 
@@ -31,7 +31,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```console
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   http://archive.regolith-desktop.com/ubuntu/unstable oracular main" | \
+   https://archive.regolith-desktop.com/ubuntu/unstable oracular main" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -58,7 +58,7 @@ to configure your system to read packages from the Regolith package repository a
 1. Register the Regolith public key to your local `apt`:
 
    ```console
-   wget -qO - http://archive.regolith-desktop.com/regolith.key | \
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
    gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
    ```
 
@@ -66,7 +66,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```console
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   http://archive.regolith-desktop.com/ubuntu/stable noble v3.2" | \
+   https://archive.regolith-desktop.com/ubuntu/stable noble v3.2" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -93,7 +93,7 @@ to configure your system to read packages from the Regolith package repository a
 1. Register the Regolith public key to your local `apt`:
 
    ```console
-   wget -qO - http://archive.regolith-desktop.com/regolith.key | \
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
    gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
    ```
 
@@ -101,7 +101,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```console
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   http://archive.regolith-desktop.com/ubuntu/stable jammy v3.2" | \
+   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.2" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -132,7 +132,7 @@ For Debian users that use the "Testing" release, Regolith can be installed, howe
 
    ```console
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   http://archive.regolith-desktop.com/debian/testing testing main" | \
+   https://archive.regolith-desktop.com/debian/testing testing main" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -148,7 +148,7 @@ to configure your system to read packages from the Regolith package repository a
 1. Register the Regolith public key to your local `apt`:
 
    ```console
-   wget -qO - http://archive.regolith-desktop.com/regolith.key | \
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
    gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
    ```
 
@@ -156,7 +156,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```console
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   http://archive.regolith-desktop.com/debian/stable bookworm v3.2" | \
+   https://archive.regolith-desktop.com/debian/stable bookworm v3.2" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -222,12 +222,12 @@ sudo apt install regolith-desktop regolith-session-sway regolith-look-nord
 ## Anatomy of the Regolith `apt` Config Line
 
 ```console
-deb [arch=amd64] http://archive.regolith-desktop.com/ubuntu/unstable noble main
-          |                                          |      |        |     |
-          |                                          |      |        |     * Repo Component
-          |                                          |      |        * Distro Version/Codename
-          |                                          |      * Repo Suite
-          |                                          * Distro Name
+deb [arch=amd64] https://archive.regolith-desktop.com/ubuntu/unstable noble main
+          |                                           |      |        |     |
+          |                                           |      |        |     * Repo Component
+          |                                           |      |        * Distro Version/Codename
+          |                                           |      * Repo Suite
+          |                                           * Distro Name
           * Architecture
 ```
 
@@ -263,9 +263,9 @@ These labels are determined by their respective upstream communities.  Examples 
 
 | Description | APT Line |
 |-------------|----------|
-| The 3.2 release of Regolith on Ubuntu Jammy for `amd64` | `deb [arch=amd64] http://archive.regolith-desktop.com/ubuntu/stable jammy v3.2` |
-| The latest release of Regolith on Debian Bookworm for `amd64` | `deb [arch=amd64] http://archive.regolith-desktop.com/debian/stable bookworm main` |
-| Testing repo for Regolith on Debian Testing for `arm64` | `deb [arch=arm64] http://archive.regolith-desktop.com/debian/testing testing main` |
+| The 3.2 release of Regolith on Ubuntu Jammy for `amd64` | `deb [arch=amd64] https://archive.regolith-desktop.com/ubuntu/stable jammy v3.2` |
+| The latest release of Regolith on Debian Bookworm for `amd64` | `deb [arch=amd64] https://archive.regolith-desktop.com/debian/stable bookworm main` |
+| Testing repo for Regolith on Debian Testing for `arm64` | `deb [arch=arm64] https://archive.regolith-desktop.com/debian/testing testing main` |
 
 ## Release Change Policy
 

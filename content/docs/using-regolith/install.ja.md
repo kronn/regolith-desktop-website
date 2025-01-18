@@ -25,7 +25,7 @@ Regolithはシステムパッケージとしてインストールすることが
 1. ローカルの`apt`にRegolithの公開鍵を登録する。
 
    ```console
-   wget -qO - http://archive.regolith-desktop.com/regolith.key | \
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
    gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
    ```
 
@@ -33,7 +33,7 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```console
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   http://archive.regolith-desktop.com/ubuntu/stable noble v3.2" | \
+   https://archive.regolith-desktop.com/ubuntu/stable noble v3.2" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -60,7 +60,7 @@ Regolithはシステムパッケージとしてインストールすることが
 1. ローカルの`apt`にRegolithの公開鍵を登録する。
 
    ```console
-   wget -qO - http://archive.regolith-desktop.com/regolith.key | \
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
    gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
    ```
 
@@ -68,7 +68,7 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```console
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   http://archive.regolith-desktop.com/ubuntu/stable jammy v3.2" | \
+   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.2" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -99,7 +99,7 @@ ARMベースのシステムにインストールするときは、上記の内�
 
    ```console
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   http://archive.regolith-desktop.com/debian/testing testing main" | \
+   https://archive.regolith-desktop.com/debian/testing testing main" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -115,7 +115,7 @@ Regolithはシステムパッケージとしてインストールすることが
 1. ローカルの`apt`にRegolithの公開鍵を登録する。
 
    ```console
-   wget -qO - http://archive.regolith-desktop.com/regolith.key | \
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
    gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
    ```
 
@@ -123,7 +123,7 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```console
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   http://archive.regolith-desktop.com/debian/stable bookworm v3.2" | \
+   https://archive.regolith-desktop.com/debian/stable bookworm v3.2" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -189,12 +189,12 @@ sudo apt install regolith-desktop regolith-session-sway regolith-look-nord
 ## Anatomy of the Regolith `apt` Config Line
 
 ```console
-deb [arch=amd64] http://archive.regolith-desktop.com/ubuntu/unstable noble main
-          |                                          |      |        |     |
-          |                                          |      |        |     * Repo Component
-          |                                          |      |        * ディストロバージョン/コードネーム
-          |                                          |      * Repo Suite
-          |                                          * ディストロ名
+deb [arch=amd64] https://archive.regolith-desktop.com/ubuntu/unstable noble main
+          |                                           |      |        |     |
+          |                                           |      |        |     * Repo Component
+          |                                           |      |        * ディストロバージョン/コードネーム
+          |                                           |      * Repo Suite
+          |                                           * ディストロ名
           * アーキテクチャ
 ```
 
@@ -231,9 +231,9 @@ deb [arch=amd64] http://archive.regolith-desktop.com/ubuntu/unstable noble main
 
 |概要 | URL |
 |---|---|
-| `amd64`のUbuntu 22.04で3.2リリースのRegolithを使用する | `deb [arch=amd64] http://archive.regolith-desktop.com/ubuntu/stable jammy v3.2` |
-| `amd64`のDebian 12で最新リリースのRegolithを使用する | `deb [arch=amd64] http://archive.regolith-desktop.com/debian/stable bookworm main` |
-| `arm64`のDebian TestingでRegolithのテストリポジトリを使用する | `deb [arch=arm64] http://archive.regolith-desktop.com/debian/testing testing main` |
+| `amd64`のUbuntu 22.04で3.2リリースのRegolithを使用する | `deb [arch=amd64] https://archive.regolith-desktop.com/ubuntu/stable jammy v3.2` |
+| `amd64`のDebian 12で最新リリースのRegolithを使用する | `deb [arch=amd64] https://archive.regolith-desktop.com/debian/stable bookworm main` |
+| `arm64`のDebian TestingでRegolithのテストリポジトリを使用する | `deb [arch=arm64] https://archive.regolith-desktop.com/debian/testing testing main` |
 
 
 ## リリースの変更ポリシー

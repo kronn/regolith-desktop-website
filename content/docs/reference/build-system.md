@@ -118,7 +118,7 @@ The ISO builder is based on the open source project [live-custom-ubuntu-from-scr
 
 ## How to determine what commit a package is built with in a given target package repo
 
-1. Download the manifest contained in the target package repository (`http://archive.regolith-desktop.com/manifests/<DISTRO>/<CODENAME>/<SUITE>-<COMPONENT>/<ARCH>/manifest.txt`)
+1. Download the manifest contained in the target package repository (`https://archive.regolith-desktop.com/manifests/<DISTRO>/<CODENAME>/<SUITE>-<COMPONENT>/<ARCH>/manifest.txt`)
 2. Find the line containing the package name
 3. Note the branch and ref in the manifest, this is the repo commit from which the package was built
 

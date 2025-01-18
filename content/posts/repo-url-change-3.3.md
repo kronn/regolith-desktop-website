@@ -20,12 +20,12 @@ The new `apt` URL:
 `/etc/apt/sources.list.d/regolith.list`:
 
 ```
-deb [arch=amd64] http://archive.regolith-desktop.com/ubuntu/stable noble main
-          |                                          |      |      |     |
-          |                                          |      |      |     * Repo Component
-          |                                          |      |      * Distro Version/Codename
-          |                                          |      * Repo Suite
-          |                                          * Distro Name
+deb [arch=amd64] https://archive.regolith-desktop.com/ubuntu/stable noble main
+          |                                           |      |      |     |
+          |                                           |      |      |     * Repo Component
+          |                                           |      |      * Distro Version/Codename
+          |                                           |      * Repo Suite
+          |                                           * Distro Name
           * Architecture
 ```
 
@@ -63,6 +63,6 @@ These labels are determined by their respective upstream communities.  Examples 
 
 | Description | APT Line |
 |-------------|----------|
-| The 3.2 release of Regolith on Ubuntu Jammy for `amd64` | `deb [arch=amd64] http://archive.regolith-desktop.com/ubuntu/stable jammy v3.2` |
-| The latest release of Regolith on Debian Bookworm for `amd64` | `deb [arch=amd64] http://archive.regolith-desktop.com/debian/stable bookworm main` |
-| Testing repo for Regolith on Debian Testing for `arm64` | `deb [arch=arm64] http://archive.regolith-desktop.com/debian/testing testing main` |
+| The 3.2 release of Regolith on Ubuntu Jammy for `amd64` | `deb [arch=amd64] https://archive.regolith-desktop.com/ubuntu/stable jammy v3.2` |
+| The latest release of Regolith on Debian Bookworm for `amd64` | `deb [arch=amd64] https://archive.regolith-desktop.com/debian/stable bookworm main` |
+| Testing repo for Regolith on Debian Testing for `arm64` | `deb [arch=arm64] https://archive.regolith-desktop.com/debian/testing testing main` |
